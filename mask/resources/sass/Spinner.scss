@@ -1,0 +1,253 @@
+// Quando o loader está fora
+.mba-loading-mask {
+    background: rgba(42, 48, 70, 0.6);
+    .load-msg {
+        background: rgba(17, 23, 37, 0.45);
+        color: #fff;
+        padding: 5px 12px;
+        font-size: 12px;
+        border-radius: 3px;
+        margin-top: 12px;
+        max-width: 240px;
+        text-align: center;
+        font-weight: 400;
+    }
+    .x-mba-spinner {
+        .spinner-android {
+            margin: 0 auto;
+            background: #fff;
+            height: 56px;
+            width: 56px;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            -webkit-box-sizing: border-box !important;;
+            box-sizing: border-box !important;
+        }
+        .spinner-ios {
+            .spinner {
+                margin: 0 auto;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                &.spinner-animating .spin-blade {
+                    -webkit-animation-play-state: running;
+                    animation-play-state: running;
+                }
+                .spin-blade {
+                    position: absolute;
+                    background: #fff;
+                    left: 44.5%;
+                    top: 37%;
+                    width: 7%;
+                    height: 20%;
+                    border-radius: 50%/20%;
+                    -webkit-animation: ios-spinner 1s linear infinite;
+                    animation: ios-spinner 1s linear infinite;
+                    -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+                    &:nth-child(1) {
+                        -webkit-animation-delay: -1.66667s;
+                        animation-delay: -1.66667s;
+                        -webkit-transform: rotate(30deg) translate(0, -150%);
+                        transform: rotate(30deg) translate(0, -150%);
+                    }
+                    &:nth-child(2) {
+                        -webkit-animation-delay: -1.58333s;
+                        animation-delay: -1.58333s;
+                        -webkit-transform: rotate(60deg) translate(0, -150%);
+                        transform: rotate(60deg) translate(0, -150%);
+                    }
+                    &:nth-child(3) {
+                        -webkit-animation-delay: -1.5s;
+                        animation-delay: -1.5s;
+                        -webkit-transform: rotate(90deg) translate(0, -150%);
+                        transform: rotate(90deg) translate(0, -150%);
+                    }
+                    &:nth-child(4) {
+                        -webkit-animation-delay: -1.41667s;
+                        animation-delay: -1.41667s;
+                        -webkit-transform: rotate(120deg) translate(0, -150%);
+                        transform: rotate(120deg) translate(0, -150%);
+                    }
+                    &:nth-child(5) {
+                        -webkit-animation-delay: -1.33333s;
+                        animation-delay: -1.33333s;
+                        -webkit-transform: rotate(150deg) translate(0, -150%);
+                        transform: rotate(150deg) translate(0, -150%);
+                    }
+                    &:nth-child(6) {
+                        -webkit-animation-delay: -1.25s;
+                        animation-delay: -1.25s;
+                        -webkit-transform: rotate(180deg) translate(0, -150%);
+                        transform: rotate(180deg) translate(0, -150%);
+                    }
+                    &:nth-child(7) {
+                        -webkit-animation-delay: -1.16667s;
+                        animation-delay: -1.16667s;
+                        -webkit-transform: rotate(210deg) translate(0, -150%);
+                        transform: rotate(210deg) translate(0, -150%);
+                    }
+                    &:nth-child(8) {
+                        -webkit-animation-delay: -1.08333s;
+                        animation-delay: -1.08333s;
+                        -webkit-transform: rotate(240deg) translate(0, -150%);
+                        transform: rotate(240deg) translate(0, -150%);
+                    }
+                    &:nth-child(9) {
+                        -webkit-animation-delay: -1s;
+                        animation-delay: -1s;
+                        -webkit-transform: rotate(270deg) translate(0, -150%);
+                        transform: rotate(270deg) translate(0, -150%);
+                    }
+                    &:nth-child(10) {
+                        -webkit-animation-delay: -0.91667s;
+                        animation-delay: -0.91667s;
+                        -webkit-transform: rotate(300deg) translate(0, -150%);
+                        transform: rotate(300deg) translate(0, -150%);
+                    }
+                    &:nth-child(11) {
+                        -webkit-animation-delay: -0.83333s;
+                        animation-delay: -0.83333s;
+                        -webkit-transform: rotate(330deg) translate(0, -150%);
+                        transform: rotate(330deg) translate(0, -150%);
+                    }
+                    &:nth-child(12) {
+                        -webkit-animation-delay: -0.75s;
+                        animation-delay: -0.75s;
+                        -webkit-transform: rotate(360deg) translate(0, -150%);
+                        transform: rotate(360deg) translate(0, -150%);
+                    }
+
+                }
+            }
+
+
+        }
+    }
+    .x-material-spinner {
+
+    }
+}
+
+// Quando o loader está dentro de um dataview, lista ou utilizar o plugin listpagging
+.x-dataview, .x-list-paging {
+    .mba-loading-mask {
+        background: none;
+        .x-mba-spinner {
+            .spinner-android {
+                background: none;
+                height: 30px;
+                width: 30px;
+                box-shadow: none;
+                padding: 5px;
+                .material-spin {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .spinner-ios {
+                .spinner {
+                    width: 25px;
+                    height: 25px;
+                    .spin-blade {
+                        background: #444;
+                        width: 5%;
+                        height: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Animações spinner ios
+
+@-webkit-keyframes ios-spinner {
+    0% {
+        opacity: 0.85; }
+    50% {
+        opacity: 0.25; }
+    100% {
+        opacity: 0.25; } }
+@keyframes ios-spinner {
+    0% {
+        opacity: 0.85; }
+    50% {
+        opacity: 0.25; }
+    100% {
+        opacity: 0.25; } }
+
+//Animações spinner Android
+
+$offset: 187;
+$duration: 1.4s;
+
+.material-spin {
+    @include animation(rotator $duration linear infinite);
+}
+
+@keyframes rotator {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(270deg));
+    }
+}
+
+@-webkit-keyframes rotator {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(270deg));
+    }
+}
+
+.path {
+    stroke-dasharray: $offset;
+    stroke-dashoffset: 0;
+    @include transform-origin(center);
+    @include animation((dash $duration ease-in-out infinite, colors ($duration*4) ease-in-out infinite));
+}
+
+@keyframes colors {
+    0% { stroke: $primary-color }
+    25% { stroke: $secondary-color }
+    50% { stroke: $tertiary-color; }
+    75% { stroke: #1B9A59; }
+    100% { stroke: #4285F4; }
+}
+
+@-webkit-keyframes colors {
+    0% { stroke: $primary-color }
+    25% { stroke: $secondary-color }
+    50% { stroke: $tertiary-color; }
+    75% { stroke: #1B9A59; }
+    100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+    0% { stroke-dashoffset: $offset; }
+    50% {
+        stroke-dashoffset: $offset/4;
+        @include transform(rotate(135deg));
+    }
+    100% {
+        stroke-dashoffset: $offset;
+        @include transform(rotate(450deg));
+    }
+}
+
+@-webkit-keyframes dash {
+    0% { stroke-dashoffset: $offset; }
+    50% {
+        stroke-dashoffset: $offset/4;
+        @include transform(rotate(135deg));
+    }
+    100% {
+        stroke-dashoffset: $offset;
+        @include transform(rotate(450deg));
+    }
+}
