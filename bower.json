@@ -1,0 +1,30 @@
+{
+    "name": "Mba.ux.incubator",
+    "version": "v0.0.1",
+    "homepage": "https://github.com/bluebile/incubator",
+    "authors": [
+        "Bluebile <info@bluebile.com>"
+    ],
+    "description": "Componentes para pré-validação",
+    "keywords": [
+        "senchatouch",
+        "extjs",
+        "ux",
+        "mask",
+        "sass"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "demo",
+        "ux",
+        "**/*.*~",
+        "gulpfile.js",
+        "bower.json",
+        "package.json",
+        "test",
+        "tests"
+    ]
+}
