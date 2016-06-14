@@ -38,7 +38,7 @@
                 service = services[i];
 
                 if (Mba.ux.incubator.service && Mba.ux.incubator.service.Service &&
-                    !(service instanceof BRBRelatorioVisita.service.Service)) {
+                    !(service instanceof Mba.ux.incubator.service.Service)) {
                     if (Ext.isString(service)) {
                         serviceName = service;
                         serviceClass = Ext.ClassManager.classes[service];
