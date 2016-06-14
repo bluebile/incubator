@@ -6,7 +6,7 @@ Ext.define('Mba.ux.incubator.service.Service', {
     },
 
     updateServiceId: function() {
-        return BRBRelatorioVisita.service.Manager.register(this);
+        return Mba.ux.incubator.service.Manager.register(this);
     },
 
     constructor: function(config) {

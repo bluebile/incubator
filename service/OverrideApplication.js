@@ -37,7 +37,7 @@
             for (i = 0; i < length; i++) {
                 service = services[i];
 
-                if (BRBRelatorioVisita.service && BRBRelatorioVisita.service.Service &&
+                if (Mba.ux.incubator.service && Mba.ux.incubator.service.Service &&
                     !(service instanceof BRBRelatorioVisita.service.Service)) {
                     if (Ext.isString(service)) {
                         serviceName = service;
@@ -53,7 +53,7 @@
                         }
                     }
 
-                    servicesIntances.push(Ext.factory(service, BRBRelatorioVisita.service.Service));
+                    servicesIntances.push(Ext.factory(service, Mba.ux.incubator.service.Service));
                 }
             }
 
