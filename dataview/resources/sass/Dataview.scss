@@ -1,0 +1,30 @@
+// Quando o loader está dentro de um dataview, lista ou utilizar o plugin listpagging
+.x-dataview {
+    .mba-loading-mask {
+        background: none;
+        .x-mba-spinner {
+            .spinner-android {
+                background: #fff;
+                height: 30px;
+                width: 30px;
+                box-shadow: none;
+                padding: 5px;
+                .material-spin {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .spinner-ios {
+                .spinner {
+                    width: 25px;
+                    height: 25px;
+                    .spin-blade {
+                        background: #444;
+                        width: 5%;
+                        height: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
