@@ -130,37 +130,6 @@
     }
 }
 
-// Quando o loader está dentro de um dataview, lista ou utilizar o plugin listpagging
-.x-dataview, .x-list-paging {
-    .mba-loading-mask {
-        background: none;
-        .x-mba-spinner {
-            .spinner-android {
-                background: none;
-                height: 30px;
-                width: 30px;
-                box-shadow: none;
-                padding: 5px;
-                .material-spin {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-            .spinner-ios {
-                .spinner {
-                    width: 25px;
-                    height: 25px;
-                    .spin-blade {
-                        background: #444;
-                        width: 5%;
-                        height: 20%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 //Animações spinner ios
 
 @-webkit-keyframes ios-spinner {
