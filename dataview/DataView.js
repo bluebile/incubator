@@ -12,7 +12,7 @@ Ext.define('Mba.ux.incubator.mask.DataView', {
         beforeLoad: function() {
             var loadingText = this.getLoadingText();
             if (loadingText && this.isPainted()) {
-                var maskConfig = this.config.maskConfig || Mba.ux.incubator.mask.getDefaultMask();
+                var maskConfig = this.config.maskConfig || Mba.ux.incubator.mask.DataView.getDefaultMask();
                 this.setMasked(maskConfig);
             }
 
@@ -30,14 +30,14 @@ Ext.define('Mba.ux.incubator.mask.DataView', {
     },
 
     onBeforeLoad: function() {
-        Mba.ux.incubator.mask.beforeLoad.apply(this);
+        Mba.ux.incubator.mask.DataView.beforeLoad.apply(this);
     }
 
 }, function() {
 
     Ext.override(Ext.DataView, {
         onBeforeLoad: function() {
-            Mba.ux.incubator.mask.beforeLoad.apply(this);
+            Mba.ux.incubator.mask.DataView.beforeLoad.apply(this);
         }
     });
 });
