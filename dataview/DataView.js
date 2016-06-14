@@ -37,7 +37,7 @@ Ext.define('Mba.ux.incubator.mask.DataView', {
 
     Ext.override(Ext.DataView, {
         onBeforeLoad: function() {
-            Mba.ux.incubator.maskbeforeLoad.apply(this);
+            Mba.ux.incubator.mask.beforeLoad.apply(this);
         }
     });
 });
