@@ -1,3 +1,7 @@
+/**
+ * Classe Base para identificação das classes de serviço
+ * @class Mba.ux.incubator.service.Service
+ */
 
 Ext.define('Mba.ux.incubator.service.Service', {
 

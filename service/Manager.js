@@ -9,12 +9,20 @@ Ext.define('Mba.ux.incubator.service.Manager', {
     requires: [ 'Mba.ux.incubator.service.OverrideApplication' ],
     singleton: true,
 
+    /**
+     * @method
+     * Registra objeto de serviço para a coleção
+     */
     register: function() {
         for (var i = 0, s; (s = arguments[i]); i++) {
             this.add(s);
         }
     },
 
+    /**
+     * @method
+     * Elimina objeto de serviço da coleção
+     */
     unregister: function() {
         for (var i = 0, s; (s = arguments[i]); i++) {
             this.remove(this.lookup(s));

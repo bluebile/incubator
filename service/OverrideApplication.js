@@ -1,7 +1,10 @@
 (function() {
     var originalFn = Ext.app.Application.prototype.onDependenciesLoaded;
 
-    // @private
+    /**
+     * @private
+     * Classe privada para sobreescrita do Ext.Application
+     */
     Ext.define('Mba.ux.incubator.service.OverrideApplication', {
         override: 'Ext.app.Application',
 
