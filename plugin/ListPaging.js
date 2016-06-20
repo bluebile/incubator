@@ -94,5 +94,16 @@ Ext.define('Mba.ux.incubator.plugin.ListPaging', {
         }
 
         this.setLoadTpl(html);
+    },
+
+    /**
+     * Fix bug sencha ao chegar no final da lista loadmask não é retirado
+     */
+    onStoreLoad: function(store) {
+        this.callParent([store]);
+
+        if (this.storeFullyLoaded()) {
+            this.getLoadMoreCmp().hide();
+        }
     }
 });
