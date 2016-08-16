@@ -249,6 +249,9 @@ Ext.define('Mba.ux.incubator.plugin.TransitionNative', {
                         me.setActiveItem(item);
                     }, 100);
                     return;
+                } else if (Ext.os.is.WindowsPhone && type === 'fade') {
+                    this.setActiveItem(item);
+                    return;
                 }
 
                 this.setActiveItem(item);
