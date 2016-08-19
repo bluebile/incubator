@@ -125,8 +125,8 @@ Ext.define('Mba.ux.incubator.plugin.TransitionNative', {
             osName = Ext.os.name.toLowerCase();
 
         if (animationPlatforms && osName in animationPlatforms) {
-            if (animationPlatforms[osName].type) {
-                animation = animationPlatforms[osName].type;
+            if (animationPlatforms[osName].animation) {
+                animation = animationPlatforms[osName].animation;
             }
         }
 
@@ -138,8 +138,8 @@ Ext.define('Mba.ux.incubator.plugin.TransitionNative', {
             osName = Ext.os.name.toLowerCase();
 
         if (animationPlatforms && osName in animationPlatforms) {
-            if (animationPlatforms[osName].animation) {
-                options = Ext.apply({}, options, animationPlatforms[osName].animation);
+            if (animationPlatforms[osName].options) {
+                options = Ext.apply({}, options, animationPlatforms[osName].options);
             }
         }
 
