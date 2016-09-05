@@ -8,8 +8,15 @@ Ext.define('Mba.ux.incubator.util.DateUtil', {
     ],
 
     config: {
-        currentTime: new Date().getTime(),
+        currentTime: '',
         currentSqlTime: ' CAST((julianday(\'now\') - 2440587.5)*86400000 AS INTEGER) '
+    },
+
+    getCurrentTime: function() {
+        if (Ext.isEmpty(this.config.currentTime)) {
+            return new Date().getTime();
+        }
+        return this.config.currentTime;
     },
 
     constructor: function() {
