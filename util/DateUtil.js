@@ -46,6 +46,28 @@ Ext.define('Mba.ux.incubator.util.DateUtil', {
             return d;
         }
         return new Date(utc + (3600000 * offset));
+    },
+
+    dataFormatadaPt: function(data) {
+        var dia = data.getDate(),
+            mes = data.getMonth() + 1,
+            ano = data.getFullYear(),
+            hora = data.getHours(),
+            minutos = data.getMinutes();
+
+        if (dia.toString().length == 1) {
+            dia = "0" + dia;
+        }
+        if (mes.toString().length == 1) {
+            mes = "0" + mes;
+        }
+        if (hora.toString().length == 1) {
+            hora = "0" + hora;
+        }
+        if (minutos.toString().length == 1) {
+            minutos = "0" + minutos;
+        }
+        return dia + "/" + mes + "/" + ano +  ' às ' + hora + 'h' + minutos;
     }
 
 });
