@@ -8,15 +8,39 @@ Ext.define('Mba.ux.incubator.util.DateUtil', {
     ],
 
     config: {
+        disableCurrentTime: false,
         currentTime: '',
         currentSqlTime: ' CAST((julianday(\'now\') - 2440587.5)*86400000 AS INTEGER) '
     },
 
+    /**
+     *
+     * Recupera a data local ou a data definida no config currentTime
+     *
+     * @returns {number}
+     */
     getCurrentTime: function() {
-        if (Ext.isEmpty(this.config.currentTime)) {
-            return new Date().getTime();
+        var timestamp = new Date().getTime();
+        if (!this.config.disableCurrentTime) {
+            if(!Ext.isEmpty(this.config.currentTime)) {
+                timestamp = this.config.currentTime;
+            }
         }
-        return this.config.currentTime;
+        return timestamp;
+    },
+
+    /**
+     *
+     * Recupera a data local ou a data definida no config currentSqlTime para o banco de dados
+     *
+     * @returns {number}
+     */
+    getCurrentSqlTime: function() {
+        var timestamp = new Date().getTime();
+        if (!this.config.disableCurrentTime) {
+            timestamp = this.config.currentSqlTime;
+        }
+        return timestamp;
     },
 
     constructor: function() {
