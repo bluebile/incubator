@@ -29,20 +29,6 @@ Ext.define('Mba.ux.incubator.util.DateUtil', {
         return timestamp;
     },
 
-    /**
-     *
-     * Recupera a data local ou a data definida no config currentSqlTime para o banco de dados
-     *
-     * @returns {number}
-     */
-    getCurrentSqlTime: function() {
-        var timestamp = new Date().getTime();
-        if (!this.config.disableCurrentTime) {
-            timestamp = this.config.currentSqlTime;
-        }
-        return timestamp;
-    },
-
     constructor: function() {
         Date.prototype.stdTimezoneOffset = function() {
             var jan = new Date(this.getFullYear(), 0, 1), jul = new Date(this.getFullYear(), 6, 1);
