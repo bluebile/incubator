@@ -14,7 +14,7 @@ Ext.define('Mba.ux.incubator.mask.Mask', {
 
     onHide: function() {
         this.callParent();
-        Ext.Viewport.blockEventBack();
+        Ext.Viewport.unbEventBack();
     },
 
     onEvent: function(e) {
